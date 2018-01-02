@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="../../data/pages/viewer.css" />
+<link rel="stylesheet" type="text/css" href="../../data/pages/scrollbar/scrollbar.css" />
+</head>
+<body>
+<div id="fmvbox">
+<div class="scrollbar disable"><div class="track"><div class="thumb"><div class="begin"><div class="end"></div></div></div></div></div>
+<div class="viewport">
+<div class="content">
+<div id="tt" class="tt"><!--subject--></div>
+<div id="hd" class="nomenu">
+	<div id="bf">
+		<div id="bf-rb">
+			<span id="bf-date"><!--date--></span>
+			<span id="bf-hide" class="frt switch">详情</span>
+		</div>
+		<div id="bf-lb-wp" class="g_ellipsis">
+			<div id="bf-lb" class="g_lc_i"><span id="bf-from" class="g_green"></span><span>发送至&nbsp;</span></div>
+			<!--recipients-->
+		</div>
+	</div>
+	<div id="dt">
+		<div class="g_rc2">
+			<span id="dt-hide" class="frt switch">隐藏</span>
+		</div>
+		<div class="g_ellipsis g_lc2">
+			<div class="g_lc_i">
+				<span class="g_lb2">发件人：</span><span id="dt-from"><!--sender--></span><span id="dt-fw"></span>
+			</div>
+		</div>
+		<div id="to-wp">
+			<div class="g_lb">收件人：</div><div id="to" class="g_fr break"><!--recipients--></div>
+		</div>
+		<div id="cc-wp">
+			<div class="g_lb">抄　送：</div><div id="cc" class="g_fr break"><!--cc--></div>
+		</div>
+		<div id="bcc-wp">
+			<div class="g_lb">密　送：</div><div id="bcc" class="g_fr break"><!--bcc--></div>
+		</div>
+		<div id="date" class="g_ellipsis g_bar"><span class="g_lb2">时　间：</span><span id="date_i"><!--date--></span></div>
+	</div>
+	<div id="at-wp">
+		<div id="at-list" onlosecapture="onLostAttachmentCapture()"><!--attachment--></div>
+		<div id="at-view-switch">
+			<span id="at-all" class="switch"></span>
+			<span id="at-some" class="switch"></span>
+		</div>
+	</div>
+	<div id="mt" class="mt_alive">
+		<div id="mt-lb">
+			<div class="g_ellipsis g_bar">
+				<span class="g_lb2">时　间：</span>
+				<span id="mt-date"><!--date--></span>
+			</div>
+			<div class="g_ellipsis g_bar">
+				<span class="g_lb2">地　点：</span>
+				<span id="mt-place"><!--place--></span>
+			</div>
+		</div>
+		<div id="mt-rb">
+			<div id="mt-rv" class="mt_vs mt_vcenter"><!--reply view--></div>
+			<div id="mt-ov" class="mt_vs mt_vcenter"><!--organizer's view--></div>
+			<div id="mt-av" class="mt_vs mt_vcenter"><!--attendee's view--></div>
+		</div>
+	</div>
+	<div id="ec" class="g_ellipsis">
+		<span id="ec_h">邮件已加密，收件方查看邮件需要密码。</span>
+		<span id="ec_s">邮件已加密，密码：<span id="ec_pwd"></span></span>
+	</div>
+</div>
+<div id="tb-wp" class="nomenu">
+	<ul id="tb"><!--toolbar buttons--></ul>
+</div>
+<div id="ct">
+	<div id="ts" class="nomenu">
+		<span id="ts-1">
+			<div id="ts-t" class="ts_t ts_e g_btn">查看译文</div><div id="ts-o" class="ts_o ts_e g_btn">查看原文</div><div id="ts-b" class="ts_b ts_d g_btn">对照显示</div>
+		</span>
+		<span id="ts-2">正在翻译，请稍候...</span>
+	</div>
+	<div id="ct-ht">
+		<div id="fmhbox1" class="disable">
+			<div class="scrollbar disable"><div class="track"><div class="thumb"><div class="begin"><div class="end"></div></div></div></div></div>
+			<iframe name="ps1" id="ps1" class="viewport" scrolling="no" frameborder="0" class="g_bar"></iframe>
+		</div><!--fmhbox1-->
+		<div id="fmhbox2" class="disable">
+			<div class="scrollbar disable"><div class="track"><div class="thumb"><div class="begin"><div class="end"></div></div></div></div></div>
+			<iframe name="ps2" id="ps2" class="viewport" scrolling="no" frameborder="0" class="g_bar"></iframe>
+		</div><!--fmhbox2-->
+	</div>
+	<div id="ct-tx">
+		<textarea id="ps3" readonly></textarea>
+		<textarea id="ps4" readonly></textarea>
+	</div>
+</div>
+</div><!--fmvbox content-->
+</div><!--fmvbox viewport-->
+</div><!--fmvbox-->
+<script type="text/javascript" src="../../data/pages/jquery.min.js"></script>
+<script type="text/javascript" src="../../data/pages/jquery.tinyscrollbar.js"></script>
+<script type="text/javascript" src="mail.js"></script>
+<script type="text/javascript" src="../../data/pages/helper.js"></script>
+<script type="text/javascript" src="../../data/pages/multiview.js"></script>
+<script type="text/javascript" src="../../data/pages/viewer.js"></script>
+</body>
+</html>

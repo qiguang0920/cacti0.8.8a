@@ -1,0 +1,48 @@
+/*******************************************************************************
+
+    Author ......... Jimmy Conner
+    Contact ........ jimmy@sqmail.org
+    Home Site ...... http://cactiusers.org
+    Program ........ Settings
+    Version ........ 0.7
+    Purpose ........ Base Plugin for Cacti Interoperability
+
+*******************************************************************************/
+
+
+----[ Purpose
+
+    Provides common infrastrucutre plugin services for Cacti's Plugin Architecture
+
+----[ Features
+
+    Provides DNS Lookup API
+    Provides a Mailer API
+
+----[ Installation
+
+	If you have not already done so, install the Plugin Architecture
+	http://cactiusers.org/wiki/PluginArchitectureInstall
+
+	Next install this Plugin using these directions
+	http://cactiusers.org/wiki/PluginsInstall
+	
+	For more information on this plugin
+	http://cactiusers.org/wiki/
+	
+    
+----[ Changelog
+
+	--- 0.7 ---
+		compat: Minor change for Cacti 0.8.7g compatibility
+
+	--- 0.6 ---
+		Settings Plugin is now only PA v2.0 compatible
+
+	--- 0.5 ---
+		-bug: Fix invalid Charset error
+
+	--- 0.4 ---
+		-bug: Remove grant users who have access to the settings tab to send e-mails
+     
+

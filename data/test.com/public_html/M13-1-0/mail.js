@@ -1,0 +1,1 @@
+﻿var gMail = {"date":"2014-12-23  22:04","from":{"mail":"mailclient@188.com","name":"网易闪电邮开发团队"},"html":"E:\\网易闪电邮\\tmp\\M13-1-0\\tmpmail~22.html","showdetail":"1","subject":"欢迎您使用网易闪电邮","to":[{"mail":"","name":"亲爱的闪电邮用户"}],"toolbar":["reply","forward"]}
