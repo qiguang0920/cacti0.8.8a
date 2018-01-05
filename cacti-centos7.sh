@@ -20,16 +20,18 @@ sed -i '57a view    all     included        .1' /etc/snmp/snmpd.conf &&
 sed -i '890a date.timezone = Asia/Chongqing' /etc/php.ini &&
 systemctl start httpd mariadb snmpd &&
 systemctl enable httpd mariadb snmpd &&
+chmod -R 777 /home/test.com/logs
 chmod -R 777 /home/test.com/public_html/cacti/resource
 chmod -R 777 /home/test.com/public_html/cacti/scripts
 chmod -R 777 /home/test.com/public_html/cacti/log
 chmod -R 777 /home/test.com/public_html/cacti/rra
 echo "*/1 * * * * /bin/php /home/test.com/public_html/cacti/poller.php" >> /var/spool/cron/root
+mysqladmin -uroot 'Admin888'
 HOSTNAME="127.0.0.1"
 DBNAME="cacti"
 PORT="3306"
 USERNAME="root"
-PASSWORD=""
+PASSWORD="Admin888"
 create_db_sql1="create user '$DBNAME'@'localhost' identified by 'Botonet123'"
 create_db_sql2="create database IF NOT EXISTS ${DBNAME}"
 create_db_sql3="GRANT all privileges ON *.* TO '$DBNAME'@'localhost'"
