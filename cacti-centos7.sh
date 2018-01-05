@@ -26,7 +26,7 @@ chmod -R 777 /home/test.com/public_html/cacti/scripts
 chmod -R 777 /home/test.com/public_html/cacti/log
 chmod -R 777 /home/test.com/public_html/cacti/rra
 echo "*/1 * * * * /bin/php /home/test.com/public_html/cacti/poller.php" >> /var/spool/cron/root
-mysqladmin -uroot 'Admin888'
+mysqladmin -uroot password 'Admin888'
 HOSTNAME="127.0.0.1"
 DBNAME="cacti"
 PORT="3306"
@@ -39,6 +39,6 @@ mysql -h${HOSTNAME}  -P${PORT}  -u${USERNAME} -p${PASSWORD} -e "${create_db_sql1
 mysql -h${HOSTNAME}  -P${PORT}  -u${USERNAME} -p${PASSWORD} -e "${create_db_sql2}"
 mysql -h${HOSTNAME}  -P${PORT}  -u${USERNAME} -p${PASSWORD} -e "${create_db_sql3}"
 mysql -h$HOSTNAME -u$USERNAME -p$PASSWORD cacti < /home/test.com/public_html/cacti/cacti.sql
-mysql_tzinfo_to_sql /usr/share/zoneinfo/ | mysql -u root -p mysql
+mysql_tzinfo_to_sql /usr/share/zoneinfo/ | mysql -u root -p{PASSWORD} mysql
 #mysql_secure_installation
 echo "Your Cacti Platform installed successfully "
