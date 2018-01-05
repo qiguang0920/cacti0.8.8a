@@ -1,4 +1,11 @@
 #!/bin/sh
+clear
+printf "
+#######################################################################
+#            Install Cacti0.8.8a-only system for CentOS7              #
+#            More information http://www.iewb.net                     #
+#######################################################################
+"
 yum install epel-release -y &&
 rpm -ivh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm &&
 yum install httpd mod_ssl openssl -y &&
@@ -41,4 +48,5 @@ mysql -h${HOSTNAME}  -P${PORT}  -u${USERNAME} -p${PASSWORD} -e "${create_db_sql3
 mysql -h$HOSTNAME -u$USERNAME -p$PASSWORD cacti < /home/test.com/public_html/cacti/cacti.sql
 mysql_tzinfo_to_sql /usr/share/zoneinfo/ | mysql -u root -p${PASSWORD} mysql
 #mysql_secure_installation
-echo "Your Cacti Platform installed successfully "
+clear
+echo -e "\033[32mYour Cacti Platform installed successfully\033[0m"
